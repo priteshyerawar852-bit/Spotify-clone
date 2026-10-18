@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="theme-color" content="#121212">
+    <meta name="description" content="A local Spotify-style music player for your songs.">
+    <title>Spotify Clone</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="left">
+
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" src="logo.svg" alt="Spotify Logo">
+                </div>
+
+                <ul>
+                    <li>
+                        <img class="invert" src="home.svg" alt="Home">
+                        Home
+                    </li>
+                    <li>
+                        <img class="invert" src="search.svg" alt="Search">
+                        Search
+                    </li>
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded m-1 p-1">
+
+                <div class="heading">
+                    <h2>Your Library</h2>
+                </div>
+
+                <!-- Songs will be added here by JavaScript -->
+                <div class="songList">
+                    <ul aria-label="Available songs"></ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/jp/safetyandprivacy/">Privacy Center</a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3">About Ads</a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/">Accessibility</a></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT MAIN SECTION -->
+        <div class="right bg-grey rounded">
+
+            <div class="header">
+                <div class="nav">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+                <div class="buttons">
+                    <button class="signupbtn">Sign Up</button>
+                    <button class="loginbtn">Login</button>
+                </div>
+            </div>
+
+            <!-- PLAYLIST CARDS -->
+            <div class="spotify-playlist">
+                <h1>Spotify Playlist</h1>
+
+                <div class="card-container">
+
+                    <div class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="24" fill="#1ed760" />
+                                <path d="M19 14 L19 34 L35 24 Z" fill="#000000" />
+                            </svg>
+                        </div>
+
+                        <img
+                            src="https://c.saavncdn.com/277/Aag-Lage-Chahe-Basti-Mai-Hindi-2019-20260122205312-500x500.jpg"
+                            alt="Aag Lage Chahe Basti Mai">
+
+                        <h2>Aag Lage Chahe Basti Mai </h2>
+                        <p>Hansraj Raghuwanshi</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="24" fill="#1ed760" />
+                                <path d="M19 14 L19 34 L35 24 Z" fill="#000000" />
+                            </svg>
+                        </div>
+
+                        <img src="https://i.scdn.co/image/ab67616d0000e1a3e8a1e2e0921890c8f3e0a001"
+                            alt="Meri Maa Ke Barabar Koi Nahi">
+
+                        <h2>Meri Maa Ke Barabar Koi Nahi</h2>
+                        <p>Jubin Nautiyal, Payal Dev</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BOTTOM MUSIC PLAYER -->
+            <div class="playbar">
+
+                <div class="songinfo">
+                    Select a song
+                </div>
+
+                <div class="player-center">
+                    <div class="songbuttons">
+                        <button id="previousSong" type="button" aria-label="Previous song"><img src="previous.svg"
+                                alt=""></button>
+                        <button id="playPause" type="button" aria-label="Play"><img src="play.svg" alt="Play"></button>
+                        <button id="nextSong" type="button" aria-label="Next song"><img src="next song.svg"
+                                alt=""></button>
+                    </div>
+                    <div class="seekbar" role="slider" aria-label="Song progress" aria-valuemin="0" aria-valuemax="100"
+                        tabindex="0">
+                        <div class="seek-progress"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="songtime">00:00 / 00:00</div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
